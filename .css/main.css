@@ -1,0 +1,964 @@
+﻿/* ==================== STYL GŁÓWNY STRONY ==================== */
+
+
+/* @import url('//fonts.googleapis.com/css?family=Montserrat|Finger+Paint&display=swap'); */
+/* Importuje gotowe czcionki z publicznej biblioteki Google */
+
+@import url('../..google-fonts/.css/google-fonts.css');
+/* Importuje gotowe czcionki z publicznej biblioteki Google */
+
+
+/* @import url('//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css'); */
+/* Importuje czcionki dla FontAwesome z ich serwerów */
+
+@import url('../..font-awesome/.css/font-awesome-newest.min.css');
+/* Importuje czcionki dla FontAwesome od siebie z serwera */
+
+
+:root
+{
+
+	/* Główna kolorystyka */
+	--kolor-wiodacy-1-b: 250, 250, 250;
+	--kolor-wiodacy-1-f: 66, 66, 66;
+	--kolor-wiodacy-1-o: 133, 133, 133;
+
+	/* Czcionki */
+	--czcionka-wiodaca: 'Montserrat', sans-serif;
+	--czcionka-akcentowa: 'Finger Paint', cursive;
+
+	/* Dodatkowa kolorystyka */
+	--kolor-wiodacy-2-f: 250, 250, 250;
+	--kolor-wiodacy-2-o: 33, 33, 33;
+
+	/* Ustawienia tła */
+	--kolor-tla: 250, 250, 250;
+	--tlo-brightness: 66%;
+	--kolor-cienia: 0, 0, 0;
+
+	/* Ustawienia linków */
+	--kolor-linkow: 250, 250, 250;
+	--kolor-hover-linkow: 255, 255, 255;
+	--kolor-unhover-linkow: 100, 100, 100;
+	--cien-hover-linkow: 255, 255, 255;
+	--kolor-apend-linkow: 166, 166, 166;
+	--cien-apend-linkow: 33, 33, 33;
+	--kolor-dymek-linkow: 250, 250, 250;
+	--tlo-dymek-linkow: 33, 33, 33;
+	--border-dymek-linkow: 66, 66, 66;
+	--cien-dymek-linkow: 66, 66, 66;
+	--czcionka-linkow: var(--czcionka-wiodaca);
+	--czcionka-apend-linkow: var(--czcionka-akcentowa);
+
+	/* Ustawienia centralki */
+	--kolor-logo: 250, 250, 250;
+	--czcionka-logo: var(--czcionka-akcentowa);
+	--cien-logo: 250, 250, 250;
+	--cien-logo-opacity: 0.6;
+	--kolor-opisu: 250, 250, 250;
+	--kolor-linku: 166, 166, 166;
+	--czcionka-linku: var(--czcionka-wiodaca);
+	--cien-linku: 33, 33, 33;
+	--cien-linku-opacity: 0.6;
+	--kolor-opisu: var(--kolor-logo);
+	--czcionka-opisu: var(--czcionka-logo);
+	--cien-opisu: var(--cien-linku);
+	--cien-opisu-opacity: var(--cien-linku-opacity);
+
+	/* Ustawienia przycisków */
+	--kolor-tla-przycisku: 250, 250, 250;
+	--opacity-przycisku: 0.33;
+	--kolor-przycisku: 250, 250, 250;
+	--border-przycisku: 66, 66, 66;
+	--border-opacity-przycisku: 0.20;
+	--cien-przycisku: 250, 250, 250;
+	--cien-opacity-przycisku: 0.6;
+	--kolor-tla-przycisku-hover: 250, 250, 250;
+	--kolor-tla-przycisku-hover-opacity: 0.55;
+	--border-przycisku-hover: 250, 250, 250;
+
+	/* Ustawienia praw autorskich */
+	--kolor-praw: 250, 250, 250;
+	--czcionka-praw: var(--czcionka-wiodaca);
+	--cien-praw: var(--kolor-praw);
+	--cien-praw-opacity: 0.6;
+
+	/* Ustawienia pływającego okienka */
+	--okienko-tlo: 250, 250, 250;
+	--okienko-cien: var(--okienko-tlo);
+	--okienko-cien-opacity: 1;
+
+
+}
+/* To jest główna deklaracja dla wszelkich elementów - używam do zmiennych CSS */
+
+
+/* -------------------------------------------------- */
+
+
+@keyframes bicieSerca
+{
+	from
+	{
+		transform: scale(1);
+		transform-origin: center center;
+		animation-timing-function: ease-out;
+	}
+	10%
+	{
+		transform: scale(0.91);
+		animation-timing-function: ease-in;
+	}
+	17%
+	{
+		transform: scale(0.98);
+		animation-timing-function: ease-out;
+	}
+	33%
+	{
+		transform: scale(0.87);
+		animation-timing-function: ease-in;
+	}
+	45%
+	{
+		transform: scale(1);
+		animation-timing-function: ease-out;
+	}
+}
+
+
+@keyframes swiecenie-tekstu
+{
+	from
+	{
+		text-shadow: -2px -3px 10px rgba(0, 0, 0, 0.6),
+    				 0px 0px 0px rgba(255, 255, 255, 0.6),
+        			 -0px -0px 0px rgba(255, 255, 255, 0.6);
+	}
+	10%
+	{
+		text-shadow: -2px -3px 10px rgba(0, 0, 0, 0.6),
+        			 2px 2px 20px rgba(255, 255, 255, 0.6),
+        			 -2px -2px 20px rgba(255, 255, 255, 0.6);
+	}
+	17%
+	{
+		text-shadow: -2px -3px 10px rgba(0, 0, 0, 0.6),
+        			 0px 0px 0px rgba(255, 255, 255, 0.6),
+        			 -0px -0px 0px rgba(255, 255, 255, 0.6);
+	}
+	33%
+	{
+		text-shadow: -2px -3px 10px rgba(0, 0, 0, 0.6),
+        			 2px 2px 20px rgba(255, 255, 255, 0.6),
+        			 -2px -2px 20px rgba(255, 255, 255, 0.6);
+	}
+	45%
+	{
+		text-shadow: -2px -3px 10px rgba(0, 0, 0, 0.6),
+        			 0px 0px 0px rgba(255, 255, 255, 0.6),
+        			 -0px -0px 0px rgba(255, 255, 255, 0.6);
+	}
+}
+
+
+@keyframes swiecenie-obrazku
+{
+	from
+	{
+		box-shadow: -0px -0px 10px 3px rgba(0, 0, 0, 0.6),
+        			0px 0px 0px 0px rgba(255, 255, 255, 0.6);
+	}
+	10%
+	{
+		box-shadow: -0px -0px 10px 3px rgba(0, 0, 0, 0.6),
+        			0px 0px 20px 10px rgba(255, 255, 255, 0.6);
+	}
+	17%
+	{
+		box-shadow: -0px -0px 10px 3px rgba(0, 0, 0, 0.6),
+        			0px 0px 0px 0px rgba(255, 255, 255, 0.6);
+	}
+	33%
+	{
+		box-shadow: -0px -0px 10px 3px rgba(0, 0, 0, 0.6),
+        			0px 0px 20px 10px rgba(255, 255, 255, 0.6);
+	}
+	45%
+	{
+		box-shadow: -0px -0px 10px 3px rgba(0, 0, 0, 0.6),
+        			0px 0px 0px 0px rgba(255, 255, 255, 0.6);
+	}
+}
+
+
+@keyframes obracanko
+{
+	from
+	{
+		transform: rotate(0deg);
+	}
+	to
+	{
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes obracanko3d
+{
+	from
+	{
+		transform: rotate3d(1, 1, 1, 0deg);
+    	overflow: hidden;
+	}
+	30%
+	{
+    	transform: rotate3d(1, 1, 1, 360deg);
+    	overflow: hidden;
+	}
+	40%
+	{
+    	transform: rotate3d(1, 1, 1, 360deg);
+    	overflow: auto;
+	}
+	60%
+	{
+    	transform: rotate3d(1, 1, 1, 360deg);
+    	overflow: auto;
+	}
+	70%
+	{
+    	transform: rotate3d(1, 1, 1, 360deg);
+    	overflow: hidden;
+	}
+	to
+	{
+		transform: rotate3d(1, 1, 1, 0deg);
+    	overflow: hidden;
+	}
+}
+
+
+/* -------------------------------------------------- */
+
+
+html,
+body
+{
+	margin: auto;
+}
+/* Tzw. reset marginesów dla html i body od wersji HTML5 */
+
+
+body
+{
+	background: rgb(var(--kolor-tla));
+	color: rgb(255, 0, 0);
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+/* No wiadomo, styl dla body */
+
+
+background
+{
+	content: "";
+	background-image: url("");
+	background-position: center center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	box-shadow: inset 2em 2em 200px 0em rgba(var(--kolor-cienia), 1.0),
+    			inset -2em -2em 200px 0em rgba(var(--kolor-cienia), 1.0);
+	filter: brightness(var(--tlo-brightness));
+/*
+	opacity: 0.33;
+*/
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	position: fixed;
+	z-index: -1;
+}
+/* Tło jest od teraz pod własnym elementem, aby JavaScript mógł go wyłapać */
+
+
+/* -------------------------------------------------- */
+
+body,
+#linki
+{
+	scrollbar-width: normal;
+	scrollbar-color: rgba(255, 255, 255, 1.0) rgba(255, 255, 255, 0.2);
+}
+/* To są style dla własnego paska przesuwania */
+
+
+body::-webkit-scrollbar,
+#linki::-webkit-scrollbar
+{
+	width: 16px;
+	height: 12px;
+}
+
+/*
+body::-webkit-scrollbar-track,
+#linki::-webkit-scrollbar-track
+{
+	background: rgba(255, 255, 255, 0.2);
+}
+*/
+
+
+body::-webkit-scrollbar-thumb,
+#linki::-webkit-scrollbar-thumb
+{
+	background-color: rgb(var(--kolor-wiodacy-1));
+	border-radius: 6px;
+	border: 3px solid rgb(var(--kolor-wiodacy-1-b));
+}
+
+
+body::-webkit-scrollbar-thumb:hover,
+#linki::-webkit-scrollbar-thumb:hover
+{
+	background-color: rgb(var(--kolor-wiodacy-1-b));
+	border: 3px solid rgb(var(--kolor-wiodacy-1));
+}
+
+
+body::-webkit-scrollbar-thumb:active,
+#linki::-webkit-scrollbar-thumb:active
+{
+	background-color: rgb(var(--kolor-wiodacy-1));
+	border: 3px solid deepskyblue;
+}
+
+
+/* -------------------------------------------------- */
+
+
+#linki
+{
+/*
+	position: fixed;
+*/
+	position: absolute;
+	top: 1em;
+	left: 1em;
+	margin: 1m;
+	z-index: 8;
+	user-select: none;
+/*
+	overflow-y: hidden;
+*/
+/*
+	max-height: 50%;
+	min-width: 10%;
+*/
+}
+/* Jest to główny kontener dla linków */
+
+/*
+#linki:hover,
+#linki:active
+{
+	overflow-y: scroll;
+}
+*/
+/* Przydatne jeśli kontener nie mieści się na ekranie */
+
+
+#linki ul, #linki ol
+{
+	padding: 0;
+	margin: 0;
+}
+/* Resetuję marginesy dla list */
+
+
+#linki ol
+{
+	list-style: none;
+}
+/* Lista numeryczna nie ma mieć znaczków */
+
+
+#linki ul
+{
+/*
+	list-style: square;
+*/
+	list-style: none;
+}
+/* Lista nieuporządkowana ma znaczki w postaci kwadracików */
+
+
+#linki ul li::before
+{
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	content: "\f101";
+/*
+	content: "\f054";
+*/
+	margin-left: -1em;
+	margin-right: 0.3em;
+}
+/* Lista nieuporządkowana ma znaczki w postaci specjalnych znaków */
+
+
+#linki ul li, #linki ol li
+{
+	margin: 1em;
+	color: rgb(var(--kolor-linkow));
+	font-family: var(--czcionka-linkow);
+	cursor: default;
+	transition: color 500ms, margin-left 500ms;
+}
+/* Główny styl dla elementów obu list */
+/* Dodany tutaj jest margin-left bo JavaScript zarządza marginesem */
+
+
+#linki ol li ul li, #linki ul li ol li
+{
+	margin-left: 2em;
+}
+/* Styl dla elementów zagnieżdżonych list */
+
+
+/*
+#linki ul li a, #linki ol li a
+*/
+#linki ol li a
+{
+	color: inherit;
+	visibility: visible;
+/*
+	border-bottom: 1px dotted currentColor;
+*/
+	text-decoration: none;
+/*
+	transition: border-bottom 500ms, visibility 500ms, margin-left 500ms; Chyba nie potrzebne, bo marginesy maja robić JavaScript
+*/
+	transition: visibility 500ms;
+}
+/* Główny styl dla wszystkich linków tj. elementów a na listach */
+
+
+#linki ul li a[alt], #linki ol li a[alt],
+#linki ul li label[alt], #linki ol li label[alt]
+{
+	position: relative;
+}
+/* Główny styl dla wszystkich linków tj. elementów a na listach ale z opisem alternatywnym */
+
+/*
+#linki ul li a:visited, #linki ol li a:visited
+{
+	
+}
+*/
+/* Styl dla linków odwiedzonych - obecnie brak */
+
+
+
+#linki ul li a:hover, #linki ol li a:hover,
+#linki ul li label:hover, #linki ol li label:hover
+{
+	color: rgb(var(--kolor-hover-linkow));
+	text-shadow: 0px 0px 5px rgb(var(--cien-hover-linkow));
+/*
+	border-bottom: 1px dashed rgba(255, 255, 255, 1); Jednak nie chcę tych podkreśleń
+*/
+/*
+	margin-left: 1em; Animacja przesuwania marginesu zostala przeniesiona do JavaScriptu
+*/
+}
+/* To koloruje linki podkreślone tj. elementy a */
+
+
+#linki ul li a:active, #linki ol li a:active,
+#linki ul li label:active, #linki ol li label:active
+{
+	color: deepskyblue;
+	text-shadow: 0px 0px 5px deepskyblue;
+/*
+	border-bottom: 1px dotted rgba(255, 255, 255, 1);
+*/
+/*	opacity: 0.5;*/
+}
+/* To koloruje linki aktywne tj. elementy a */
+
+
+#linki ul li a::after, #linki ol li a::after
+{
+	color: rgb(var(--kolor-apend-linkow));
+	font-family: var(--czcionka-apend-linkow);
+	line-height: 1em;
+	position: absolute;
+	right: 2000px;
+	opacity: 0.2;
+	transition: opacity 500ms, color 500ms;
+	content: " { " attr(href) " } ";
+	text-shadow: 0px 0px 2px rgb(var(--cien-apend-linkow));
+/*
+	white-space: pre;
+*/
+}
+/* Do dodaje do każdego linka informacje z wyciągniętym hrefem [jest to dodane tutaj a nie przy hoverze aby była płynna animacja pojawiania sie] */
+
+
+#linki ul li a:hover::after, #linki ol li a:hover::after
+/*
+#linki ul li a:focus::after, #linki ol li a:focus::after
+*/
+{
+	right: 0px;
+	position: relative;
+	display: inline;
+	opacity: 1;
+}
+/* To koloruje podkreślone informacje dla linków tj. elementy a */
+
+
+#linki ul li a[alt]:hover::before, #linki ul li label[alt]:hover::before, #linki ol li a[alt]:hover::before, #linki ol li label[alt]:hover::before
+/*
+#linki ul li a[alt]:focus::before, #linki ul li label[alt]:focus::before, #linki ol li a[alt]:focus::before, #linki ol li label[alt]:focus::before
+*/
+{
+	color: rgb(var(--kolor-dymek-linkow));
+	text-shadow: none;
+	content: attr(alt);
+	position: absolute;
+	left: 10px;
+	top: 24px;
+	min-width: 200px;
+	border: 2px rgb(var(--border-dymek-linkow)) solid;
+	border-radius: 6px;
+	background-color: rgb(var(--tlo-dymek-linkow));
+	padding: 8px;
+	font-size: 12px;
+	z-index: 1;
+	box-shadow: 0px 0px 10px 1px rgba(var(--cien-dymek-linkow), 0.6);
+}
+/* To koloruje podkreślone informacje dla linków tj. elementy a ale z opisem alternatywnym */
+
+
+/* -------------------------------------------------- */
+
+.przycisk
+{
+	pointer-events: all;
+	padding: 0.5em;
+	font-size: 1em;
+	background: rgba(var(--kolor-tla-przycisku), var(--opacity-przycisku));
+	color: rgb(var(--kolor-przycisku));
+	border: 1px solid rgba(var(--border-przycisku), var(--border-opacity-przycisku));
+	margin: 1em;
+	transition: background 300ms;
+	border-radius: 5px;
+	box-shadow: -0px -3px 10px rgba(var(--cien-przycisku), var(--cien-opacity-przycisku));
+	text-shadow: 0px 1px 5px rgba(var(--cien-przycisku), var(--cien-opacity-przycisku));
+	animation: swiecenie-obrazku 1.5s ease-in-out infinite alternate;
+}
+
+.przycisk:hover
+{
+	background: rgba(var(--kolor-tla-przycisku-hover), var(--kolor-tla-przycisku-hover-opacity));
+	cursor: pointer;
+	box-shadow: 0px 0px 5px rgb(var(--border-przycisku-hover));
+}
+
+.przycisk:active
+{
+/*
+	color: deepskyblue;
+*/
+	background: deepskyblue;
+	text-shadow: 0px 0px 5px deepskyblue;
+}
+
+.przycisk a
+{
+	color: inherit;
+	text-decoration: inherit;
+}
+
+/* -------------------------------------------------- */
+
+.top_centrala {
+    top: -4vh                       !important;
+    left: 50%                       !important;
+    transform: translate(-50%, -0%) !important;
+}
+
+.top_centrala div {
+    display: none;
+}
+
+.top_centrala .tytuł {
+    transform: scale(0.5)           !important;
+}
+
+#centrala
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 1;
+    user-select: none;
+/*
+    pointer-events: none;
+*/
+}
+/* Główny kontener na logo */
+
+
+#logo
+{
+	color: rgb(var(--kolor-logo));
+	font-family: var(--czcionka-logo);
+	font-size: 12vh;
+    text-align: center;
+/*
+    display: flex;
+*/
+	text-shadow: -2px -3px 10px rgba(var(--cien-logo), var(--cien-logo-opacity));
+    animation: bicieSerca 1.5s ease-in-out infinite alternate both, swiecenie-tekstu 1.5s ease-in-out infinite alternate;
+    pointer-events: none;
+    position: relative;
+    margin: auto;
+    display: block;
+}
+/* To jest kontener na tytuł w logo */
+
+/*
+#logo::after
+{
+	content: 'Bart•Infinity';
+}
+*/
+/* To dodaje treść do kontenera tytułu w logo */
+
+
+/*
+#logo ::before
+*/
+#logo img
+{
+	content: '';
+/*
+	background-image: url("../.img/favicon.ico");
+*/
+	background-position: center center;
+	background-attachment: static;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 10vh;
+	height: 10vh;
+    display: inline;
+/*
+    position: absolute;
+    top: 4vh;
+    left: 0px;
+*/
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: -2vh;
+    margin-bottom: -1.5vh;
+	border-radius: 50%;
+	border: 2px solid rgb(var(--kolor-logo));
+	box-shadow: -0px -0px 10px 3px rgba(var(--cien-logo), var(--cien-logo-opacity));
+	animation: obracanko 0.9s linear infinite, swiecenie-obrazku 1.5s ease-in-out infinite alternate;
+}
+/* To jest kontener, który dodaje obrazek przed kontener tytułu */
+
+/*
+#logo:hover::before
+{
+	animation-play-state: paused;
+}
+*/
+/* To potrafi zatrzymać animację obrazka po najechaniu na niego */
+
+
+#centrala .podtytuł .link
+{
+	color: rgb(var(--kolor-linku));
+	font-family: var(--czcionka-linku);
+	font-weight: bold;
+	text-shadow: 2px 3px 10px rgba(var(--cien-linku), var(--cien-linku-opacity));
+	font-size: 2.0em;
+	margin: 0.6em;
+	text-align: center;
+}
+#centrala .podtytuł .link a {
+    color: inherit;
+    text-decoration: none;
+}
+/* To jest kolejny kontener tym razem na podtytuł w logo */
+
+
+#centrala .podtytuł .link a:after
+{
+	content: '}';
+	display: inline;
+}
+#centrala .podtytuł .link a:before
+{
+	content: '{';
+	display: inline;
+}
+/* To dodaje treść do kontenera podtytułu w logo */
+
+
+#centrala .podtytuł .opis
+{
+	color: rgb(var(--kolor-opisu));
+	font-family: var(--czcionka-opisu);
+	font-size: 1.6em;
+	text-shadow: 2px 3px 10px rgba(var(--cien-opisu), var(--cien-opisu-opacity));
+	text-align: center;
+	margin: 0.6em;
+}
+/* To jest kolejny kontener w logo tym razem na opis */
+
+/*
+#centrala .podtytuł .opis::after
+{
+	content: 'coding // gaming // music';
+	display: block;
+}
+*/
+/* To dodaje treść do kontenera na opis */
+
+#centrala .opis
+{
+	color: rgb(var(--kolor-opisu));
+	font-family: var(--czcionka-opisu);
+	font-size: 1.0em;
+	text-shadow: 2px 3px 10px rgba(var(--cien-opisu), var(--cien-opisu-opacity));
+	text-align: center;
+	margin: 0.6em;
+}
+/* To jest kolejny kontener w logo tym razem na opis */
+
+
+#linki_socjalne
+{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+}
+
+#linki_socjalne ol,
+#linki_socjalne ul
+{
+    text-align: center;
+    user-select: none;
+    list-style: none;
+}
+
+#linki_socjalne li
+{
+    display: inline-block;
+    margin: 0.50em 1em;
+    color: rgb(var(--kolor-linkow));
+    font-family: var(--czcionka-linkow);
+    cursor: default;
+    transition: color 500ms, margin-left 500ms;
+}
+
+#linki_socjalne li a
+{
+    color: inherit;
+    text-decoration: none;
+    transition: visibility 500ms;
+}
+
+
+#prawa_autorskie
+{
+	position: fixed;
+	bottom: 1%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 9;
+    user-select: none;
+    z-index: 1;
+/*
+	pointer-events: none;
+*/
+}
+
+
+#prawa_autorskie div
+{
+	color: rgb(var(--kolor-praw));
+	font-family: var(--czcionka-praw);
+	text-shadow: 0px 0px 2px rgba(var(--cien-praw), var(--cien-praw-opacity));
+	font-size: 0.75em;
+    text-align: center;
+}
+
+/* -------------------------------------------------- */
+
+.down-list,
+.pływające_okienko-link
+{
+	font-style: inherit;
+	cursor: pointer;
+}
+/* To są klasy używane do pływającego okienka */
+
+
+#pływające_okienko
+{
+	display: none;
+	position: fixed;
+	top: 10%;
+	left: 3%;
+	right: 3%;
+	bottom: 5%;
+	z-index: 9;
+/*
+	border-radius: 1em;
+*/
+}
+/* Kontener na pływające okienko */
+
+
+#pływające_okienko .wnętrze
+{
+	background: rgb(var(--okienko-tlo));
+	box-shadow: 0px 0px 30px rgba(var(--okienko-cien), var(--okienko-cien-opacity));
+	border-radius: 12px;
+	overflow: hidden;
+	height: 100%;
+	width: 100%;
+}
+
+
+#pływające_okienko iframe
+{
+	border: none;
+	width: 100%;
+	height: 100%;
+}
+/* Ramka w pływającym okienku */
+
+
+#pływające_okienko .zamknij
+{
+/*
+	width: 20px;
+	height: 20px;
+*/
+	font-size: 16px;
+	font-family: monospace;
+	cursor: pointer;
+	color: rgb(255, 255, 255);
+	padding: 10px;
+	background: rgba(30, 30, 30, 1.0);
+	position: absolute;
+	top: -1em;
+	right: -1em;
+	border-radius: 50%;
+	min-width: 1em;
+	min-height: 1em;
+	line-height: 1.0em;
+	text-align: center;
+	transition: background 300ms;
+}
+/* Przycisk zamykania w pływającym okienku */
+
+#pływające_okienko .zamknij::after
+{
+	content: "\f00d";
+	font-family: "Font Awesome 5 Free";
+	font-weight: 800;
+}
+
+
+#pływające_okienko .zamknij:hover
+{
+	background: #E81123;
+	box-shadow: 0px 0px 15px #E81123;
+}
+
+
+#pływające_okienko .zamknij:active
+{
+	background: deepskyblue;
+}
+
+
+/* -------------------------------------------------- */
+
+
+#flagi
+{
+	display: inline-block;
+	min-width: 720px;
+	min-height: 58px;
+	padding: 10px;
+	margin: 10px;
+	background: white;
+	border-radius: 6px;
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
+/*
+	transform: rotate(90deg);
+*/
+}
+
+/* -------------------------------------------------- */
+
+.april-fools
+{
+	animation: obracanko3d 20s linear infinite;
+	overflow: hidden;
+}
+/* Kodzik na aprils fools */
+
+/* -------------------------------------------------- */
+
+/*
+@media only screen and (max-device-width: 800px)
+*/
+@media only screen and (max-width: 800px)
+{
+
+	#logo
+	{
+    	font-size: 4vh;
+	}
+	#logo img
+	{
+		width: 3vh;
+		height: 3vh;
+		margin-right: -1vh;
+		margin-bottom: -0.5vh;
+	}
+	
+	#centrala .podtytuł,
+	#centrala .opis,
+    #linki_socjalne
+	{
+    	display: none;
+	}
+
+}
+/* To jest prosta logika, która wykrywa rozmiar ekranu, ma wykrywać telefony i zmieniać co nieco wygląd */
+
+
+
+/* ==================== KONIEC STYLU GŁÓWNEGO STRONY ==================== */
