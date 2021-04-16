@@ -342,7 +342,7 @@ body::-webkit-scrollbar-thumb:active,
 /* -------------------------------------------------- */
 
 
-#linki
+#menu_pionowe
 {
 /*
 	position: fixed;
@@ -364,8 +364,8 @@ body::-webkit-scrollbar-thumb:active,
 /* Jest to główny kontener dla linków */
 
 /*
-#linki:hover,
-#linki:active
+#menu_pionowe:hover,
+#menu_pionowe:active
 {
 	overflow-y: scroll;
 }
@@ -373,7 +373,7 @@ body::-webkit-scrollbar-thumb:active,
 /* Przydatne jeśli kontener nie mieści się na ekranie */
 
 
-#linki ul, #linki ol
+.linki ul, .linki ol
 {
 	padding: 0;
 	margin: 0;
@@ -381,14 +381,14 @@ body::-webkit-scrollbar-thumb:active,
 /* Resetuję marginesy dla list */
 
 
-#linki ol
+.linki ol
 {
 	list-style: none;
 }
 /* Lista numeryczna nie ma mieć znaczków */
 
 
-#linki ul
+.linki ul
 {
 /*
 	list-style: square;
@@ -398,7 +398,7 @@ body::-webkit-scrollbar-thumb:active,
 /* Lista nieuporządkowana ma znaczki w postaci kwadracików */
 
 
-#linki ul li::before
+#menu_pionowe ul li::before
 {
 	font-family: "Font Awesome 5 Free";
 	font-weight: 900;
@@ -412,7 +412,7 @@ body::-webkit-scrollbar-thumb:active,
 /* Lista nieuporządkowana ma znaczki w postaci specjalnych znaków */
 
 
-#linki ul li, #linki ol li
+.linki ul li, .linki ol li
 {
 	margin: 1em;
 	color: rgb(var(--kolor-linkow));
@@ -424,7 +424,7 @@ body::-webkit-scrollbar-thumb:active,
 /* Dodany tutaj jest margin-left bo JavaScript zarządza marginesem */
 
 
-#linki ol li ul li, #linki ul li ol li
+#menu_pionowe .linki ol li ul li, #menu_pionowe .linki ul li ol li
 {
 	margin-left: 2em;
 }
@@ -434,7 +434,7 @@ body::-webkit-scrollbar-thumb:active,
 /*
 #linki ul li a, #linki ol li a
 */
-#linki ol li a
+.linki ol li a
 {
 	color: inherit;
 	visibility: visible;
@@ -450,15 +450,15 @@ body::-webkit-scrollbar-thumb:active,
 /* Główny styl dla wszystkich linków tj. elementów a na listach */
 
 
-#linki ul li a[alt], #linki ol li a[alt],
-#linki ul li label[alt], #linki ol li label[alt]
+.linki ul li a[alt], .linki ol li a[alt],
+.linki ul li label[alt], .linki ol li label[alt]
 {
 	position: relative;
 }
 /* Główny styl dla wszystkich linków tj. elementów a na listach ale z opisem alternatywnym */
 
 /*
-#linki ul li a:visited, #linki ol li a:visited
+.linki ul li a:visited, .linki ol li a:visited
 {
 	
 }
@@ -467,8 +467,8 @@ body::-webkit-scrollbar-thumb:active,
 
 
 
-#linki ul li a:hover, #linki ol li a:hover,
-#linki ul li label:hover, #linki ol li label:hover
+.linki ul li a:hover, .linki ol li a:hover,
+.linki ul li label:hover, .linki ol li label:hover
 {
 	color: rgb(var(--kolor-hover-linkow));
 	text-shadow: 0px 0px 5px rgb(var(--cien-hover-linkow));
@@ -482,8 +482,8 @@ body::-webkit-scrollbar-thumb:active,
 /* To koloruje linki podkreślone tj. elementy a */
 
 
-#linki ul li a:active, #linki ol li a:active,
-#linki ul li label:active, #linki ol li label:active
+.linki ul li a:active, .linki ol li a:active,
+.linki ul li label:active, .linki ol li label:active
 {
 	color: deepskyblue;
 	text-shadow: 0px 0px 5px deepskyblue;
@@ -495,7 +495,7 @@ body::-webkit-scrollbar-thumb:active,
 /* To koloruje linki aktywne tj. elementy a */
 
 
-#linki ul li a::after, #linki ol li a::after
+#menu_pionowe .linki ul li a::after, #menu_pionowe .linki ol li a::after
 {
 	color: rgb(var(--kolor-apend-linkow));
 	font-family: var(--czcionka-apend-linkow);
@@ -513,7 +513,7 @@ body::-webkit-scrollbar-thumb:active,
 /* Do dodaje do każdego linka informacje z wyciągniętym hrefem [jest to dodane tutaj a nie przy hoverze aby była płynna animacja pojawiania sie] */
 
 
-#linki ul li a:hover::after, #linki ol li a:hover::after
+#menu_pionowe .linki ul li a:hover::after, #menu_pionowe .linki ol li a:hover::after
 /*
 #linki ul li a:focus::after, #linki ol li a:focus::after
 */
@@ -526,9 +526,9 @@ body::-webkit-scrollbar-thumb:active,
 /* To koloruje podkreślone informacje dla linków tj. elementy a */
 
 
-#linki ul li a[alt]:hover::before, #linki ul li label[alt]:hover::before, #linki ol li a[alt]:hover::before, #linki ol li label[alt]:hover::before
+.linki ul li a[alt]:hover::before, .linki ul li label[alt]:hover::before, .linki ol li a[alt]:hover::before, .linki ol li label[alt]:hover::before
 /*
-#linki ul li a[alt]:focus::before, #linki ul li label[alt]:focus::before, #linki ol li a[alt]:focus::before, #linki ol li label[alt]:focus::before
+.linki ul li a[alt]:focus::before, .linki ul li label[alt]:focus::before, .linki ol li a[alt]:focus::before, .linki ol li label[alt]:focus::before
 */
 {
 	color: rgb(var(--kolor-dymek-linkow));
@@ -758,29 +758,18 @@ body::-webkit-scrollbar-thumb:active,
     transform: translate(-50%, -20%);
 }
 
-#linki_socjalne ol,
-#linki_socjalne ul
+#linki_socjalne .linki ol,
+#linki_socjalne .linki ul
 {
     text-align: center;
     user-select: none;
     list-style: none;
 }
 
-#linki_socjalne li
+#linki_socjalne .linki li
 {
     display: inline-block;
     margin: 0.50em 1em;
-    color: rgb(var(--kolor-linkow));
-    font-family: var(--czcionka-linkow);
-    cursor: default;
-    transition: color 500ms, margin-left 500ms;
-}
-
-#linki_socjalne li a
-{
-    color: inherit;
-    text-decoration: none;
-    transition: visibility 500ms;
 }
 
 
