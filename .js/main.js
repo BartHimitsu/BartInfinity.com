@@ -130,7 +130,7 @@ $(".pływające_okienko-link").click(function()
 var hoverlinki = 'rgb(var(--kolor-unhover-linkow))';
 var unhoverlinki = 'rgb(var(--kolor-linkow))';
 
-$("#linki ol > li > label, #linki ul > li > label").hover(function()
+$(".linki ol > li > label, .linki ul > li > label").hover(function()
 {
 	$(this).parent().parent().find('li').css('color', hoverlinki);
 }, function()
@@ -140,7 +140,7 @@ $("#linki ol > li > label, #linki ul > li > label").hover(function()
 /* Dzięki temu po najechaniu na linki reszta linków zmienia kolor - łapie tylko linki 1go rzędu */
 
 
-$("#linki ol > li > ul > li > label, #linki ul > li > ul > li > label").hover(function()
+$(".linki ol > li > ul > li > label, .linki ul > li > ul > li > label").hover(function()
 {
 	$(this).parent().parent().parent().parent().find('li').css('color', hoverlinki);
 }, function()
