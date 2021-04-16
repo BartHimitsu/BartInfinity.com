@@ -152,7 +152,7 @@ $("#linki ol > li > ul > li > label, #linki ul > li > ul > li > label").hover(fu
 
 /* -------------------------------------------------- */
 
-$("#linki ol > li > label").hover(function()
+$("#menu_pionowe ol > li > label").hover(function()
 {
 	$(this).parent().css('margin-left', "32px");
 }, function()
@@ -161,7 +161,7 @@ $("#linki ol > li > label").hover(function()
 });
 /* To ma zmieniać marginesy linków tj. elementów listy z linkami - łapie tylko linki 1go rzędzu */
 
-$("#linki ol > li > ul > li > label").hover(function()
+$("#menu_pionowe ol > li > ul > li > label").hover(function()
 {
 	$(this).parent().css('margin-left', "48px");
 }, function()
