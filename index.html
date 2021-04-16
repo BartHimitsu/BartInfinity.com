@@ -48,8 +48,18 @@
 	<!-- NIE WIEM CZEGO TU SZUKASZ, ALE LEPIEJ OPUŚĆ TO MIEJSCE -->
 	<!-- NIE WIEM CZEGO TU SZUKASZ, ALE LEPIEJ OPUŚĆ TO MIEJSCE -->
 
-	<div id="wczytywanie" style="position: fixed; z-index: 99; color: rgb(var(--kolor-wiodacy-1-f)); background: rgb(var(--kolor-wiodacy-1-b)); height: 100%; width: 100%; display: flex; text-align: center;">
-		<div style="margin: auto; font-size: 2em; cursor: pointer;" onclick="document.querySelector('#wczytywanie').style.display = 'none';">Loading...<br/>Click to skip.</div>
+	<div id="wczytywanie" style="position: fixed; z-index: 99; font-family:'Courier New', Courier, monospace; color: #F0F0F0; background: #1B1B1B;; height: 100%; width: 100%; display: flex; text-align: center;">
+		<div style="margin: auto; font-size: 2em; cursor: default; user-select: none;">Loading...<br/>
+		<span id="wczytywanie_ukryj" style="font-size: 0.66em; cursor: pointer; text-decoration: underline;"></span>
+		<script>
+			setTimeout(function() {
+				var element = document.getElementById('wczytywanie_ukryj');
+				element.innerHTML = 'It takes more time than usually so click here to skip!';
+				element.onclick = function() {
+					this.parentElement.parentElement.remove();
+				};
+			}, 5000)
+		</script></div>
 	</div>
 
 	<div id="linki">
