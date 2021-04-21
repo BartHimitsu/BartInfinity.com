@@ -633,6 +633,7 @@ body::-webkit-scrollbar-thumb:active,
     animation: bicieSerca 1.5s ease-in-out infinite alternate both, swiecenie-tekstu 1.5s ease-in-out infinite alternate;
     pointer-events: none;
     position: relative;
+	white-space: nowrap;
     margin: auto;
     display: block;
 }
