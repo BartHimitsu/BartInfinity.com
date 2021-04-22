@@ -42,6 +42,14 @@
 </head>
 <!-- ==================== KONIEC DANYCH NAGŁÓWKOWYCH STRONY ==================== -->
 <!-- ==================== ZAWARTOŚĆ STRONY ==================== -->
+<div id="cookies" style="display: inline-block; position: absolute; z-index: 999; user-select: none; top: 0px; left: 50%; transform: translate(-50%, 0%);background: white; color: black; font-size: 14px; padding: 2px; text-align: center;">This domain is using a cookies stored on your local PC to operate own websites. If you don't agree with that then leave our websites. <a href="" style="color: blue;" onclick="removeElementById('cookies'); setCookie('hide_cookies','yes',30); return false;">Click here to close</a>.
+<script>
+	function removeElementById(v) {var e = document.getElementById(v); e.remove();}
+	function setCookie(cn, cv, ex) {var d = new Date(); d.setTime(d.getTime() + (ex * 24 * 60 * 60 * 1000)); document.cookie = cn + "=" + cv + ";" + "expires="+d.toUTCString() + ";path=/";}
+	function getCookie(k){var v=document.cookie.match('(^|;) ?'+k+'=([^;]*)(;|$)'); return v?v[2]:null}
+	getCookie('hide_cookies') != 'yes' ?null:removeElementById('cookies');
+</script>
+</div>
 <body>
 
 	<!-- NIE WIEM CZEGO TU SZUKASZ, ALE LEPIEJ OPUŚĆ TO MIEJSCE -->
