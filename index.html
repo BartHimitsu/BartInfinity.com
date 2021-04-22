@@ -175,7 +175,7 @@
 			<div class="podtytuł">
 				<div class="link">
                     <a href="./" onclick="return false;">
-                        <script>document.write( document.domain );</script>
+                        <script>document.write( 'www.' + document.domain.split('.').slice(-2).join('.') );</script>
                     </a>
 				</div>
 				<div class="opis">
