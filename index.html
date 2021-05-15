@@ -42,25 +42,28 @@
 </head>
 <!-- ==================== KONIEC DANYCH NAGŁÓWKOWYCH STRONY ==================== -->
 <!-- ==================== ZAWARTOŚĆ STRONY ==================== -->
-<div id="cookies" style="display: inline-block; position: absolute; z-index: 999; user-select: none; top: 0px; left: 50%; transform: translate(-50%, 0%);background: white; border-radius: 0 0 5px 5px ; color: black; font-size: 14px; padding: 2px; text-align: center;">
-	This domain is using a cookies stored on your local device to operate own websites. If you don't agree with that then leave our websites. <a href="" style="color: blue;" onclick="removeElementById('cookies'); setCookie('hide_cookies','yes',30); return false;">Click here to close</a>.
-<script>
-	function removeElementById(v) {var e = document.getElementById(v); e.remove();}
-	function setCookie(cn, cv, ex) {var d = new Date(); d.setTime(d.getTime() + (ex * 24 * 60 * 60 * 1000)); document.cookie = cn + "=" + cv + ";" + "expires="+d.toUTCString() + ";path=/";}
-	function getCookie(k){var v=document.cookie.match('(^|;) ?'+k+'=([^;]*)(;|$)'); return v?v[2]:null}
-	getCookie('hide_cookies') != 'yes' ?null:removeElementById('cookies');
-</script>
-</div>
 <body>
 
+	<div id="cookies" style="display: inline-block; position: absolute; z-index: 999; user-select: none; top: 0px; left: 50%; transform: translate(-50%, 0%);background: white; border-radius: 0 0 5px 5px ; color: black; font-size: 14px; padding: 2px; text-align: center;">
+		This domain is using a cookies stored on your local device to operate own websites. If you don't agree with that then leave our websites. <a href="" style="color: blue;" onclick="removeElementById('cookies'); setCookie('hide_cookies','yes',30); return false;">Click here to close</a>.
+		<noscript><p>(Actually you have disabled scripts so you will never hide that)</p></noscript>
+	<script>
+		function removeElementById(v) {var e = document.getElementById(v); e.remove();}
+		function setCookie(cn, cv, ex) {var d = new Date(); d.setTime(d.getTime() + (ex * 24 * 60 * 60 * 1000)); document.cookie = cn + "=" + cv + ";" + "expires="+d.toUTCString() + ";path=/";}
+		function getCookie(k){var v=document.cookie.match('(^|;) ?'+k+'=([^;]*)(;|$)'); return v?v[2]:null}
+		getCookie('hide_cookies') != 'yes' ?null:removeElementById('cookies');
+	</script>
+	</div>
+
 	<!-- NIE WIEM CZEGO TU SZUKASZ, ALE LEPIEJ OPUŚĆ TO MIEJSCE -->
 	<!-- NIE WIEM CZEGO TU SZUKASZ, ALE LEPIEJ OPUŚĆ TO MIEJSCE -->
 	<!-- NIE WIEM CZEGO TU SZUKASZ, ALE LEPIEJ OPUŚĆ TO MIEJSCE -->
 
-	<div id="wczytywanie" style="position: fixed; z-index: 99; font-family:'Courier New', Courier, monospace; color: #F0F0F0; background: #1B1B1B;; height: 100%; width: 100%; display: flex; text-align: center;">
+	<div id="wczytywanie" style="display: none; position: fixed; z-index: 99; font-family:'Courier New', Courier, monospace; color: #F0F0F0; background: #1B1B1B;; height: 100%; width: 100%; text-align: center;">
 		<div style="margin: auto; font-size: 2em; cursor: default; user-select: none;">Loading...<br/>
 		<span id="wczytywanie_ukryj" style="font-size: 0.66em; cursor: pointer; text-decoration: underline;"></span>
 		<script>
+			document.getElementById('wczytywanie').style.display = "flex"; // Najpierw jest ukryte dopiero pokazane gdy skrypty są włączone
 			setTimeout(function() {
 				var element = document.getElementById('wczytywanie_ukryj');
 				element.innerHTML = 'It takes more time than usually so click here to skip!';
@@ -164,11 +167,13 @@
 			<div id="logo" class="tytuł">
 				<img src="./.img/favicon.ico"/>
                 <script>document.write( document.title );</script>
+				<noscript>Bart Infinity</noscript>
 			</div>
 			<div class="podtytuł">
 				<div class="link">
                     <a href="./" onclick="return false;">
                         <script>document.write( 'www.' + document.domain.split('.').slice(-2).join('.') );</script>
+						<noscript>www.bartinfinity.com</noscript>
                     </a>
 				</div>
 				<div class="opis">
@@ -486,7 +491,13 @@
 		<div class="zamknij"></div>
 	</div>
 
-
+	<noscript>
+		<style>
+			background {
+				background: gray;
+			}
+		</style>
+	</noscript>
 
 	<background>
 		
